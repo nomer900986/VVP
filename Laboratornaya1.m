@@ -1,0 +1,11 @@
+d=0.95;
+b=0.05;
+a=-3.25;
+x=8.2;
+k=4;
+y=cos(k*(x-a))+(power(10,-4)*(power((x+a),3)+power(x,4)*d))/k*power((x-a),3)+(power(abs(x+a),1/5)/2.4*b);
+mas=[d b a x k y];
+mas(1:2)=1.1;
+mas=sort(mas);
+sum=mas(1)+mas(end);
+mas(end-1)=sum
